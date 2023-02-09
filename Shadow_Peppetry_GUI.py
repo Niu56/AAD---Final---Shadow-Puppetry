@@ -126,8 +126,6 @@ def main():
     # YOUR DESIGN / GEOMETRY GENERATION
     # Geometry Creation
 
-    seed(1)
-
     global NbPt, Tps
 
     NbPt = {"value" : 20}
@@ -285,6 +283,7 @@ def main():
     controls = THREE.OrbitControls.new(camera, renderer.domElement)
     controls.rotateSpeed = 0
     controls.panSpeed = 0.2
+    controls.enableZoom = False
 
     def createLimitPan(camera, controls, THREE ):
         v = THREE.Vector3.new()
